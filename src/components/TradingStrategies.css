@@ -1,0 +1,346 @@
+:root {
+    --primary-bg: #1a1a2e;
+    --card-bg: #16213e;
+    --accent: #0f3460;
+    --highlight: #e94560;
+    --text-light: #f1f1f1;
+    --text-muted: #b8b8b8;
+    --formula-bg: rgba(15, 52, 96, 0.4);
+    --card-border: #253555;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: var(--primary-bg);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 10px 0 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--accent);
+}
+
+h1 {
+    font-size: 32px;
+    margin: 0;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    font-weight: 700;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+.strategies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .strategies-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.strategy-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-left: 3px solid var(--highlight);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.strategy-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.strategy-number {
+    background-color: var(--highlight);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.strategy-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    flex-grow: 1;
+    color: white;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.tag {
+    background-color: var(--accent);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.description {
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.formula-container {
+    background-color: var(--formula-bg);
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid var(--card-border);
+}
+
+.formula-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--highlight);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.formula {
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.formula-components {
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+}
+
+.where {
+    font-style: italic;
+    color: var(--highlight);
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.param {
+    margin-left: 12px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: var(--text-muted);
+    display: flex;
+}
+
+.param-symbol {
+    color: var(--highlight);
+    font-weight: 600;
+    margin-right: 6px;
+    min-width: 16px;
+    font-size: 12px;
+}
+
+.logic-container {
+    margin-top: auto;
+    background-color: rgba(22, 33, 62, 0.7);
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 2px solid var(--highlight);
+}
+
+.logic-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--highlight);
+    margin-bottom: 5px;
+}
+
+.logic-content {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.recommendations {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recommendations h2 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+.recommendations h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: var(--highlight);
+}
+
+.recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .recommendations-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.recommendation-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.recommendation-icon {
+    background-color: var(--accent);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.recommendation-content {
+    flex-grow: 1;
+}
+
+.recommendation-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    margin-bottom: 3px;
+}
+
+.recommendation-text {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.greek {
+    font-family: serif;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--highlight);
+    font-size: 14px;
+}
+
+.operator {
+    color: #4a9eff;
+    margin: 0 2px;
+    font-weight: bold;
+}
+
+.formula-part {
+    padding: 2px 0;
+}
+
+.sigma {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--highlight);
+}
+
+.fraction {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 3px;
+}
+
+.numerator, .denominator {
+    display: block;
+    padding: 2px 3px;
+}
+
+.fraction-line {
+    display: block;
+    border-top: 1px solid white;
+    margin: 1px 0;
+}
+
+.condition {
+    margin-left: 15px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.condition-value {
+    color: var(--highlight);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.param-definition {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
